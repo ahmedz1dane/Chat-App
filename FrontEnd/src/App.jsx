@@ -26,7 +26,7 @@ function App() {
         } else {
           dispatch(logout());
         }
-        console.log(response); // handle the response data
+        // console.log(response); // handle the response data
         setLoading(false); // set loading to false after fetching the data
       } catch (error) {
         if (error.response && error.response.status === 404) {

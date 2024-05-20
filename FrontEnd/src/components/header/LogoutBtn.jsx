@@ -30,7 +30,7 @@ function LogoutBtn() {
         }
       );
 
-      console.log("response", response.data);
+      // console.log("response", response.data);
 
       if (response.status === 200) {
         dispatch(logout());
