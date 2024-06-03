@@ -5,7 +5,6 @@ import Logoii from "../components/Logoii.jsx";
 import Button from "../components/Button.jsx";
 import Input from "../components/Input";
 import { useDispatch } from "react-redux";
-// import authservice from "../appwrite/auth";
 import { useForm } from "react-hook-form";
 import Cookies from "js-cookie";
 
@@ -61,10 +60,9 @@ function Login() {
         body: formData,
         credentials: "include",
       });
-      const userData = await response.json();
-
+      const userDataJson = await response.json();
       if (response.ok) {
-        dispatch(authLogin({ userData }));
+        dispatch(authLogin({ userData: userDataJson.data }));
 
         // Access the cookie
         const accessToken = Cookies.get("accessToken");

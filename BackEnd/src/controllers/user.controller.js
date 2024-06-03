@@ -318,7 +318,7 @@ const loginUser = asyncHandler(async (req, res) => {
         new ApiResponse(
           200,
           {
-            user: loggedInUser,
+            data: loggedInUser,
             accessToken,
             refreshToken,
           },
@@ -481,6 +481,14 @@ const getCurrentUser = asyncHandler(async (req, res) => {
   return res
     .status(200)
     .json(new ApiResponse(200, req.user, "Current User fetched successfully"));
+});
+
+const getAllUsers = asyncHandler(async (req, res) => {
+  const users = await User.find();
+
+  return res
+    .status(200)
+    .json(new ApiResponse(200, users, "All users fetched successfully"));
 });
 
 const updateAccountDetails = asyncHandler(async (req, res) => {
@@ -768,4 +776,5 @@ export {
   updateUserCoverImage,
   getUserChannelProfile,
   getWatchHistory,
+  getAllUsers,
 };

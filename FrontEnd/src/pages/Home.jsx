@@ -23,7 +23,7 @@ function Home() {
         style={{
           height: "97vh",
           width: "40vw",
-          backgroundColor: "red",
+          backgroundColor: "gray",
         }}
       >
         <HomeLeft />

@@ -1,6 +1,7 @@
 import { Router } from "express";
 import {
   changeCurrentPassword,
+  getAllUsers,
   getCurrentUser,
   getUserChannelProfile,
   getWatchHistory,
@@ -64,6 +65,7 @@ router.route("/change-password").post(verifyJWT, changeCurrentPassword);
 router.route("/current-user").get(verifyJWT, getCurrentUser);
 // DOUBT: Why get is used ?
 // ANS:
+router.route("/allUsers").get(getAllUsers);
 
 router.route("/update-account").patch(verifyJWT, updateAccountDetails);
 // DOUBT: Why patch is used ?

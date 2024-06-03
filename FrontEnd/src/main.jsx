@@ -9,6 +9,8 @@ import { Provider } from "react-redux";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import store from "./store/store.js";
 import AuthLayout from "./components/AuthLayout.jsx";
+import HomeLeft from "./pages/HomeLeft.jsx";
+import HomeRight from "./pages/HomeRight.jsx";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +20,16 @@ const router = createBrowserRouter([
       {
         path: "/home",
         element: <Home />,
+        children: [
+          {
+            path: "/home/left",
+            element: <HomeLeft />,
+          },
+          {
+            path: "home/right",
+            element: <HomeRight />,
+          },
+        ],
       },
       {
         path: "/",

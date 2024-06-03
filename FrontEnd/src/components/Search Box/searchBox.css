@@ -1,0 +1,46 @@
+.search-input {
+  display: flex;
+  flex-direction: column; /* Maintain column direction */
+  align-items: center;
+  margin-bottom: 1rem;
+  width: 39vw;
+  margin-top: 5px;
+  margin-left: 2px;
+  margin-right: 5px;
+}
+
+.search-input,
+.search-dropdown {
+  /* Apply styles to both input and dropdown */
+  flex: 1; /* Make both elements equally sized */
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.search-dropdown {
+  margin-top: -15px;
+  width: 39vw;
+  margin-left: -3px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  overflow-y: auto;
+}
+
+.user-info {
+  background-color: antiquewhite;
+  height: 60px;
+  display: flex;
+  font-family: "Times New Roman", Times, serif;
+}
+.user-name {
+  margin-left: 15px;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+}
